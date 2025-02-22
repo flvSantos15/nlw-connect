@@ -1,0 +1,13 @@
+from src.model.configs.connection import DBConnectionHandler
+from src.model.entites.eventos import Eventos
+
+class EventosRepository:
+  def insert(self, event_name: str) -> None:
+    with DBConnectionHandler() as db:
+      try:
+        new_event = Eventos(nome=event_name)
+        db.session.add(new_event)
+        db.session.commit()
+      except Exception as exception:
+        db.session.rollback()
+        raise exception
