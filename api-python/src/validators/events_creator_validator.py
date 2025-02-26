@@ -1,4 +1,4 @@
-from cerberus import Validator
+from cerberus import Validator # type: ignore
 
 def events_creator_validator(request: any):
   body_validator = Validator({
@@ -13,4 +13,4 @@ def events_creator_validator(request: any):
   response = body_validator.validate(request.json)
 
   if (response is False):
-    print(body_validator.errors)
+    raise Exception(body_validator.errors)
