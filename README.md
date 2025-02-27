@@ -51,20 +51,15 @@
 
 <div id='aprendizados'>
   <h2>Motivação</h2>
-    <p>Durante o evento da NWL, decidi me inscrever em 4 trilhas.</p>
-
-    Python: Porque queria me atualizar com a linguagem e aprender coisas novas.
-    Pude rever conceitos de código limpo, arquitetura, pude aprender sobre testes em python.
-
-    Java: Nunca tinha feito nada em Javs, descidi me inscrever para ter a experiência com a linguagem.
-    Gostei muito e pretendo seguir com o estudo da linguagem.
-
-    ReactJS: Já trabalho a mais de 3 anos com React, mas sempre que participo aprendo algo novo e nem sempre
-    é código, mas aprendizados sobre melhores formas de se construir algo, arquitetura, estrutura de projeto, etc.
-
-    NodeJS: Já construi aplicações com NodeJS, mas pretendendo continuar aprendendo e vi na NLW uma forma de dar
-    uma passa a mais com Node.
-
+  <p>Durante o evento da NWL, decidi me inscrever em 4 trilhas.</p>
+  <p>Python: Porque queria me atualizar com a linguagem e aprender coisas novas.
+    Pude rever conceitos de código limpo, arquitetura, pude aprender sobre testes em python.</p>
+    <p>Java: Nunca tinha feito nada em Javs, descidi me inscrever para ter a experiência com a linguagem.
+    Gostei muito e pretendo seguir com o estudo da linguagem.</p>
+    <p>ReactJS: Já trabalho a mais de 3 anos com React, mas sempre que participo aprendo algo novo e nem sempre
+    é código, mas aprendizados sobre melhores formas de se construir algo, arquitetura, estrutura de projeto, etc.</p>
+    <p>NodeJS: Já construi aplicações com NodeJS, mas pretendendo continuar aprendendo e vi na NLW uma forma de dar
+    uma passa a mais com Node.</p>    
 </div>
 
 <div id='author'>
