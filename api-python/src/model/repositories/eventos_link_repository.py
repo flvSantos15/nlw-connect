@@ -1,8 +1,9 @@
 import random
 from src.model.configs.connection import DBConnectionHandler
 from src.model.entites.eventos_link import EventosLink
+from src.model.repositories.interfaces.eventos_link_repository import EventosLinkRepositoryInterface
 
-class EventosLinkRepository():
+class EventosLinkRepository(EventosLinkRepositoryInterface):
   def insert(self, event_id: int, subscriber_id: int) -> str:
     with DBConnectionHandler() as db:
       try:

@@ -1,3 +1,5 @@
+# Venv
+
 install:
 pip3 install virtualenv
 
@@ -6,3 +8,7 @@ python -m venv venv
 
 ativando:
 . venv/bin/activate
+
+# Testes
+
+pytest -s -v caminho_do_arquivo
