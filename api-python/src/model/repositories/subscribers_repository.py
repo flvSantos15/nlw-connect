@@ -2,7 +2,7 @@ from src.model.configs.connection import DBConnectionHandler
 from src.model.entites.inscritos import Inscritos
 from .interfaces.subscribers_repository import SubscribersRepositoryInterface
 
-# PArei em 27:00
+# Parei em 27:00
 
 class SubscribersRepository(SubscribersRepositoryInterface):
   def insert(self, subscriber_infos: dict) -> None:
