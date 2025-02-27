@@ -2,6 +2,8 @@ from src.model.configs.connection import DBConnectionHandler
 from src.model.entites.inscritos import Inscritos
 from .interfaces.subscribers_repository import SubscribersRepositoryInterface
 
+# PArei em 27:00
+
 class SubscribersRepository(SubscribersRepositoryInterface):
   def insert(self, subscriber_infos: dict) -> None:
     with DBConnectionHandler() as db:
@@ -27,3 +29,18 @@ class SubscribersRepository(SubscribersRepositoryInterface):
           .one_or_none()
       )
       return data
+    
+  def select_subscribers_by_link(self, link: str, event_id: int) -> list:
+    with DBConnectionHandler() as db:
+      data = (
+        db.session
+          .query(Inscritos)
+          .filter(
+            Inscritos.link == link,
+            Inscritos.evento_id == event_id
+          )
+          .all()
+      )
+      return data
+    
+  
