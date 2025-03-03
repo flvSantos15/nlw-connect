@@ -1,4 +1,4 @@
-from sqlalchemy import func, desc
+from sqlalchemy import func, desc # type: ignore
 from src.model.configs.connection import DBConnectionHandler
 from src.model.entites.inscritos import Inscritos
 from .interfaces.subscribers_repository import SubscribersRepositoryInterface

@@ -1,4 +1,4 @@
-import pytest
+import pytest # type: ignore
 from .subscribers_repository import SubscribersRepository
 
 @pytest.mark.skip("Insert in DB")
