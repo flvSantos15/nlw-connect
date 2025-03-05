@@ -14,6 +14,20 @@ const subscriptionSchema = z.object({
 
 type TSubscriptionFormData = z.infer<typeof subscriptionSchema>;
 
+type TSubscriptionFormProps = TSubscriptionFormData & {
+  referer?: string | null;
+};
+
+async function subscribeToEvent({
+  name,
+  email,
+  referer,
+}: TSubscriptionFormProps) {
+  return {
+    subscriberId: 1,
+  };
+}
+
 export function SubscriptionForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -30,12 +44,10 @@ export function SubscriptionForm() {
   async function handleSubscribe({ name, email }: TSubscriptionFormData) {
     const referer = searchParams.get("referer");
 
-    console.log({ name, email });
     // TODO: Apos criar a api em node
     // Fazer a integracao com o front e gerar a documentacao com o orval
     // Assim essa funcao ficara disponivel
-    //const { subscriberId } = await subscribeToEvent({ name, email, referer })
-    const subscriberId = 1;
+    const { subscriberId } = await subscribeToEvent({ name, email, referer });
 
     router.push(`/invite/${subscriberId}`);
 

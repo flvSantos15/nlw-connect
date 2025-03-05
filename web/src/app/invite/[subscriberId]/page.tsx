@@ -44,7 +44,7 @@ export default async function Invite({ params }: IInviteLinkInputProps) {
 
           <InviteLinkInput inviteLink={inviteLink} />
 
-          <Stats />
+          <Stats subscriberId={subscriberId} />
         </div>
       </div>
 
