@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { Button } from "@/component/button";
 import { InputRoot, InputIcon, InputField } from "@/component/input";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const subscriptionSchema = z.object({
   name: z.string().min(2, "Digite seu nome completo"),
@@ -14,6 +15,9 @@ const subscriptionSchema = z.object({
 type TSubscriptionFormData = z.infer<typeof subscriptionSchema>;
 
 export function SubscriptionForm() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   const {
     reset,
     handleSubmit,
@@ -23,8 +27,18 @@ export function SubscriptionForm() {
     resolver: zodResolver(subscriptionSchema),
   });
 
-  function handleSubscribe(data: TSubscriptionFormData) {
-    console.log(data);
+  async function handleSubscribe({ name, email }: TSubscriptionFormData) {
+    const referer = searchParams.get("referer");
+
+    console.log({ name, email });
+    // TODO: Apos criar a api em node
+    // Fazer a integracao com o front e gerar a documentacao com o orval
+    // Assim essa funcao ficara disponivel
+    //const { subscriberId } = await subscribeToEvent({ name, email, referer })
+    const subscriberId = 1;
+
+    router.push(`/invite/${subscriberId}`);
+
     reset();
   }
 

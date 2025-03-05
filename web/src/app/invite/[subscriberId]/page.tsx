@@ -6,8 +6,16 @@ import { InviteLinkInput } from "./invite-link-input";
 
 import logo from "@/assets/logo.svg";
 
-export default function Invite() {
-  const inviteLink = "https://devstage.com.br/invite/17f3-27h2-41f3-u734";
+interface IInviteLinkInputProps {
+  params: Promise<{
+    subscriberId: string;
+  }>;
+}
+
+export default async function Invite({ params }: IInviteLinkInputProps) {
+  const { subscriberId } = await params;
+  // const inviteLink = `https://devstage.com.br/invites/${subscriberId}`;
+  const inviteLink = `http://localhost:3333/invites/${subscriberId}`;
 
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
