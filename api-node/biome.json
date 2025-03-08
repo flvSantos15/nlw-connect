@@ -1,6 +1,3 @@
-// 20250217220543
-// https://file.notion.so/f/f/08f749ff-d06d-49a8-a488-9846e081b224/3a494a21-5072-45ba-b408-7183ab2e2a9e/biome.json?table=block&id=19d395da-5770-8182-9a93-df7b3aba7cc1&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&expirationTimestamp=1739865600000&signature=rRMy6-o55L2WPOjaOwjckVZaUpduoh53t7K8epE_dVM&downloadName=biome.json
-
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "organizeImports": {
