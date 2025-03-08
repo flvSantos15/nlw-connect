@@ -38,6 +38,11 @@
   - [ViteJS](https://vitejs.dev/)
   - [TypeScript](https://www.typescriptlang.org/)
   - [TailwindCSS](https://tailwindcss.com.com/)
+  - [NodeJS](https://nodejs.org/docs/latest/api/)
+  - [Fastify](fastify.dev/docs/latest)
+  - [Zod](https://zod.dev/)
+  - [REDIS]()
+  - [POSTGRES]()
 </div>
 
 <div id='features'>
