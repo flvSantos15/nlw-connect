@@ -1,9 +1,9 @@
-from sqlalchemy import func, desc # type: ignore
+from sqlalchemy import desc, func  # type: ignore
 from src.model.configs.connection import DBConnectionHandler
 from src.model.entites.inscritos import Inscritos
+
 from .interfaces.subscribers_repository import SubscribersRepositoryInterface
 
-# Parei em 27:00
 
 class SubscribersRepository(SubscribersRepositoryInterface):
   def insert(self, subscriber_infos: dict) -> None:

@@ -7,6 +7,3 @@ class MinhaClasse:
 
 with MinhaClasse():
   print("Executando...")
-
-
-# Parei em 41:34
