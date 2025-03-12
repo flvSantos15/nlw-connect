@@ -5,3 +5,7 @@ Content-Type: application/json
   "name": "Flávio Santos",
   "email": "flvsantos300@gmail.com"
 }
+
+###
+
+GET http://localhost:3333/invites/diego123
