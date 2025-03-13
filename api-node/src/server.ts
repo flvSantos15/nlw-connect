@@ -9,7 +9,9 @@ import {
   ZodTypeProvider,
 } from "fastify-type-provider-zod";
 import { env } from "./env";
-import { subscriberToEventRoute } from "./routes/subscribe-to-event";
+import { accessInviteLinkRoute } from "./routes/access-event-link-route";
+import { getSubcriberInviteClicksRoute } from "./routes/get-subscriber-invite-click-route";
+import { subscriberToEventRoute } from "./routes/subscribe-to-event-route";
 
 const app = fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -35,6 +37,8 @@ app.register(fastifySwaggerUi, {
 });
 
 app.register(subscriberToEventRoute);
+app.register(accessInviteLinkRoute);
+app.register(getSubcriberInviteClicksRoute);
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("HTTP server running on http://localhost:3333");

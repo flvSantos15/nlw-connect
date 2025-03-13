@@ -3,7 +3,6 @@ import { z } from "zod";
 import { env } from "../env";
 import { accessInviteLink } from "../services/access-invite-link";
 
-// Parei em 29:05
 export const accessInviteLinkRoute: FastifyPluginAsyncZod = async (app) => {
   app.get(
     "/invites/:subscriberId",
@@ -15,9 +14,7 @@ export const accessInviteLinkRoute: FastifyPluginAsyncZod = async (app) => {
           subscriberId: z.string(),
         }),
         response: {
-          201: z.object({
-            subscriberId: z.string(),
-          }),
+          302: z.null(),
         },
       },
     },
