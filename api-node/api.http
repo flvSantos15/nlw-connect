@@ -13,3 +13,15 @@ GET http://localhost:3333/invites/diego123
 ###
 
 GET http://localhost:3333/subscribers/diego123/ranking/clicks
+
+###
+
+GET http://localhost:3333/subscribers/diego123/ranking/count
+
+###
+
+GET http://localhost:3333/subscribers/diego123/ranking/position
+
+###
+
+GET http://localhost:3333/ranking
